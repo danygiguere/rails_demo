@@ -1,0 +1,101 @@
+<%= form_with model: pokemon do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% pokemon.errors.full_messages_for(:name).each do |message| %>
+      <div class="red"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= "Type 1" %><br>
+    <%= form.text_area :type1 %>
+    <% pokemon.errors.full_messages_for(:type1).each do |message| %>
+      <div class="red"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= "Type 2" %><br>
+    <%= form.text_area :type2 %>
+    <% pokemon.errors.full_messages_for(:type2).each do |message| %>
+      <div class="red"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :total %><br>
+    <%= form.text_field :total %>
+    <% pokemon.errors.full_messages_for(:total).each do |message| %>
+      <div class="red"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :hp %><br>
+    <%= form.text_field :hp %>
+    <% pokemon.errors.full_messages_for(:hp).each do |message| %>
+      <div class="red"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :attack %><br>
+    <%= form.text_field :attack %>
+    <% pokemon.errors.full_messages_for(:attack).each do |message| %>
+      <div class="red"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :defense %><br>
+    <%= form.text_field :defense %>
+    <% pokemon.errors.full_messages_for(:defense).each do |message| %>
+      <div class="red"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= "SP. Atk" %><br>
+    <%= form.text_field :sp_atk %>
+    <% pokemon.errors.full_messages_for(:sp_atk).each do |message| %>
+      <div class="red"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= "SP. Def" %><br>
+    <%= form.text_field :sp_def %>
+    <% pokemon.errors.full_messages_for(:sp_def).each do |message| %>
+      <div class="red"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :speed %><br>
+    <%= form.text_field :speed %>
+    <% pokemon.errors.full_messages_for(:speed).each do |message| %>
+      <div class="red"><%= message %></div>
+    <% end %>
+  </div>
+
+   <div>
+    <%= form.label :generation %><br>
+    <%= form.text_field :generation %>
+    <% pokemon.errors.full_messages_for(:generation).each do |message| %>
+      <div class="red"><%= message %></div>
+    <% end %>
+  </div>
+
+   <div>
+    <%= form.label :legendary %><br>
+    <%= form.select :legendary, ['true', 'false'] %>
+    <% pokemon.errors.full_messages_for(:legendary).each do |message| %>
+      <div class="red"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
